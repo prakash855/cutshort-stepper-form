@@ -20,7 +20,7 @@ const data = [
 ];
 
 export default function UserTabs() {
-  const [value, setValue] = React.useState(2);
+  const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -32,8 +32,8 @@ export default function UserTabs() {
       onChange={handleChange}
       aria-label="disabled tabs example"
     >
-      {data.map((eachData) => (
-        <Tab label={<UserTab {...eachData} />} />
+      {data.map((eachData, id) => (
+        <Tab key={id} label={<UserTab {...eachData} />} />
       ))}
     </Tabs>
   );

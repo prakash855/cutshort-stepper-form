@@ -35,7 +35,7 @@ export default function CreateWorkSpace({nextStep}) {
           <Typography component="h1" variant="h5">
             Let's set up a home for all your work
           </Typography>
-          <small>you can always create another workspace later</small>
+          <small className="tag-line">you can always create another workspace later</small>
           <Box
             component="form"
             onSubmit={handleSubmit}

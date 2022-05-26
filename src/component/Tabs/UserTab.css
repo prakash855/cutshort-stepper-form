@@ -18,7 +18,12 @@
   text-align: left;
 }
 
+.tag-line {
+  font-weight: 400;
+  color: gray;
+}
+
 .css-1999axt-MuiAvatar-root,
 .css-1vhaqj4-MuiButtonBase-root-MuiButton-root {
-  background-color: #654DE4 !important;
+  background-color: #654de4 !important;
 }

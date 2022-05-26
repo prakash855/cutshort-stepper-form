@@ -5,11 +5,22 @@
   height: 100vh;
 }
 
+.logo {
+  color: #654de4;
+  margin-right: 2px;
+}
+
+.css-i4bv87-MuiSvgIcon-root{
+  font-size: 2rem !important;
+}
+
 .eden {
   position: absolute;
   left: 50%;
   top: 10%;
   transform: translate(-50%, -10%);
+  display: flex;
+  align-items: center;
 }
 
 .stepper-wrapper {
@@ -74,14 +85,14 @@
 }
 
 .stepper-item.completed .step-counter {
-  background-color: #654DE4;
+  background-color: #654de4;
   color: white;
 }
 
 .stepper-item.completed::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #4bb543;
+  border-bottom: 2px solid #654de4;
   width: 100%;
   top: 20px;
   left: 50%;

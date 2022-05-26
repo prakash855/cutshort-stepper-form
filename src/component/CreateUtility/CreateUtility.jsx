@@ -9,10 +9,10 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme();
 
-export default function CreateUtility({nextStep}) {
+export default function CreateUtility({ nextStep }) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    nextStep()
+    nextStep();
     const data = new FormData(event.currentTarget);
     console.log({
       workSpaceName: data.get("workSpaceName"),
@@ -33,9 +33,11 @@ export default function CreateUtility({nextStep}) {
           }}
         >
           <Typography component="h1" variant="h5">
-            How are yu planning to use Eden?
+            How are you planning to use Eden?
           </Typography>
-          <small>we'll stream your setup experience accordingly.</small>
+          <small className="tag-line">
+            we'll stream your setup experience accordingly.
+          </small>
           <Box
             component="form"
             onSubmit={handleSubmit}

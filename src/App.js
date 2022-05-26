@@ -1,25 +1,36 @@
+import { useState } from "react";
 import "./App.css";
 import UserForm from "./component/UserForm.jsx/UserForm";
 
+import LogoDevIcon from "@mui/icons-material/LogoDev";
+
 function App() {
+  const [step, setStep] = useState(1);
+  const completedMenus = (menu) => {
+    setStep(menu);
+  };
+
   return (
     <div className="App">
-      <h2 className="eden">Eden</h2>
-      <div class="stepper-wrapper">
-        <div class="stepper-item completed">
-          <div class="step-counter">1</div>
+      <h2 className="eden">
+        <LogoDevIcon className="logo" />
+        Eden
+      </h2>
+      <div className="stepper-wrapper">
+        <div className={`stepper-item completed`}>
+          <div className="step-counter">1</div>
         </div>
-        <div class="stepper-item completed">
-          <div class="step-counter">2</div>
+        <div className={step < 2 ? `stepper-item` : `stepper-item completed`}>
+          <div className="step-counter">2</div>
         </div>
-        <div class="stepper-item active">
-          <div class="step-counter">3</div>
+        <div className={step < 3 ? `stepper-item` : `stepper-item completed`}>
+          <div className="step-counter">3</div>
         </div>
-        <div class="stepper-item">
-          <div class="step-counter">4</div>
+        <div className={step < 4 ? `stepper-item` : `stepper-item completed`}>
+          <div className="step-counter">4</div>
         </div>
       </div>
-      <UserForm />
+      <UserForm completedMenus={completedMenus} />
     </div>
   );
 }

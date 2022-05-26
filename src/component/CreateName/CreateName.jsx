@@ -35,7 +35,7 @@ export default function CreateName({ nextStep }) {
           <Typography component="h1" variant="h5">
             Welcome! First thing first...
           </Typography>
-          <small>you can always change them later</small>
+          <small className="tag-line">you can always change them later</small>
           <Box
             component="form"
             onSubmit={handleSubmit}

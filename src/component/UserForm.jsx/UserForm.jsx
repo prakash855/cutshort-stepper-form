@@ -4,11 +4,12 @@ import CreateName from "../CreateName/CreateName";
 import CreateUtility from "../CreateUtility/CreateUtility";
 import CreateWorkSpace from "../CreateWorkSpace/CreateWorkSpace";
 
-const UserForm = () => {
+const UserForm = ({ completedMenus }) => {
   const [step, setStep] = useState(1);
   const nextStep = () => {
     setStep((step) => step + 1);
   };
+  completedMenus(step);
   switch (step) {
     case 1:
       return <CreateName nextStep={nextStep} />;

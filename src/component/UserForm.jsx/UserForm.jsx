@@ -1,24 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import { useStep } from "../../context/step-context";
 import Acknowledge from "../Acknowledge/Acknowledge";
 import CreateName from "../CreateName/CreateName";
 import CreateUtility from "../CreateUtility/CreateUtility";
 import CreateWorkSpace from "../CreateWorkSpace/CreateWorkSpace";
 
-const UserForm = ({ completedMenus }) => {
-  const [step, setStep] = useState(1);
-  const nextStep = () => {
-    setStep((step) => step + 1);
-  };
+const UserForm = () => {
+  const { step, completedMenus } = useStep();
+
+  // Callback props
   completedMenus(step);
+
   switch (step) {
     case 1:
-      return <CreateName nextStep={nextStep} />;
+      return <CreateName />;
     case 2:
-      return <CreateWorkSpace nextStep={nextStep} />;
+      return <CreateWorkSpace />;
     case 3:
-      return <CreateUtility nextStep={nextStep} />;
+      return <CreateUtility />;
     case 4:
-      return <Acknowledge nextStep={nextStep} />;
+      return <Acknowledge />;
     default:
       console.log("done!");
   }

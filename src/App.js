@@ -1,14 +1,10 @@
-import { useState } from "react";
+import { useStep } from "./context/step-context";
 import "./App.css";
 import UserForm from "./component/UserForm.jsx/UserForm";
-
 import LogoDevIcon from "@mui/icons-material/LogoDev";
 
 function App() {
-  const [step, setStep] = useState(1);
-  const completedMenus = (menu) => {
-    setStep(menu);
-  };
+  const { step } = useStep();
 
   return (
     <div className="App">
@@ -30,7 +26,9 @@ function App() {
           <div className="step-counter">4</div>
         </div>
       </div>
-      <UserForm completedMenus={completedMenus} />
+
+      {/* Form */}
+      <UserForm />
     </div>
   );
 }

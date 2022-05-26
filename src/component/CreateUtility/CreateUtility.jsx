@@ -6,10 +6,16 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { useStep } from "../../context/step-context";
 
 const theme = createTheme();
 
-export default function CreateUtility({ nextStep }) {
+export default function CreateUtility() {
+  const { nextStep } = useStep();
+  // custom hook for title
+  useDocumentTitle("Utility");
+
   const handleSubmit = (event) => {
     event.preventDefault();
     nextStep();

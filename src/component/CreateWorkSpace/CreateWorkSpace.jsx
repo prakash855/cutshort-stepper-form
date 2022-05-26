@@ -6,13 +6,19 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { useStep } from "../../context/step-context";
 
 const theme = createTheme();
 
-export default function CreateWorkSpace({nextStep}) {
+export default function CreateWorkSpace() {
+  const { nextStep } = useStep();
+  // custom hook for title
+  useDocumentTitle("Workspace");
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    nextStep()
+    nextStep();
     const data = new FormData(event.currentTarget);
     console.log({
       workSpaceName: data.get("workSpaceName"),
@@ -35,7 +41,9 @@ export default function CreateWorkSpace({nextStep}) {
           <Typography component="h1" variant="h5">
             Let's set up a home for all your work
           </Typography>
-          <small className="tag-line">you can always create another workspace later</small>
+          <small className="tag-line">
+            you can always create another workspace later
+          </small>
           <Box
             component="form"
             onSubmit={handleSubmit}

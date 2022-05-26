@@ -7,7 +7,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { useDocumentTitle } from "../hooks/useDocumentTitle";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const theme = createTheme();
 

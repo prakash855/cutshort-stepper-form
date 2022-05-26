@@ -1,7 +1,7 @@
 import { useStep } from "./context/step-context";
 import "./App.css";
 import UserForm from "./component/UserForm.jsx/UserForm";
-import LogoDevIcon from "@mui/icons-material/LogoDev";
+import logo from "./assets/logo.png";
 
 function App() {
   const { step } = useStep();
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <h2 className="eden">
-        <LogoDevIcon className="logo" />
+        <img src={logo} alt="logo" />
         Eden
       </h2>
       <div className="stepper-wrapper">

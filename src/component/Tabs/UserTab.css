@@ -1,14 +1,17 @@
-.css-heg063-MuiTabs-flexContainer {
+.css-heg063-MuiTabs-flexContainer,
+.css-k008qs {
   display: flex !important;
   justify-content: space-between !important;
 }
 
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root,
+.css-1q2h7u5 {
   max-width: 45% !important;
   text-transform: none !important;
 }
 
-.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected,
+.css-1q2h7u5.Mui-selected {
   border: 1px solid #1976d2 !important;
   border-radius: 5px 5px 0 0 !important;
 }

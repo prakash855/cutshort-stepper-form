@@ -1,6 +1,6 @@
 .css-heg063-MuiTabs-flexContainer {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
@@ -9,9 +9,8 @@
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  border: 1px solid #1976d2;
-  border-bottom: none;
-  border-radius: 5px;
+  border: 1px solid #1976d2 !important;
+  border-radius: 5px 5px 0 0 !important;
 }
 
 .user-tabs {

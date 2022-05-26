@@ -61,17 +61,33 @@ export default function CreateWorkSpace() {
               autoComplete="workSpaceName"
               autoFocus
             />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
-              name="workSpaceURL"
-              label="workspace URL (optional)"
-              type="url"
-              placeholder="www.google.com"
-              id="workSpaceURL"
-              autoComplete="current-workSpaceURL"
-            />
+            <div style={{ display: "flex" }}>
+              <TextField
+                margin="normal"
+                style={{ flex: 1.5 }}
+                required
+                fullWidth
+                name="workSpaceURL"
+                // label="workspace URL (optional)"
+                type="url"
+                disabled
+                value="www.eden.com/"
+                id="workSpaceURL"
+                autoComplete="current-workSpaceURL"
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                style={{ flex: 2.5 }}
+                name="workSpaceURL"
+                label="workspace URL (optional)"
+                type="url"
+                placeholder="www.google.com"
+                id="workSpaceURL"
+                autoComplete="current-workSpaceURL"
+              />
+            </div>
 
             <Button
               type="submit"
